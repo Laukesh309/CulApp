@@ -76,3 +76,10 @@ const job = schedule.scheduleJob(rule, function (props) {
   let slotId = props.getHours() == 4 ? 2 : 3;
   bookCultClass(epochTime.getTime(), slotId);
 });
+
+app.get("/hc", (req, res) => {
+  res.send("working file");
+});
+app.listen(3000, () => {
+  console.log("server execution start");
+});
