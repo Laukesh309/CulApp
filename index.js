@@ -61,7 +61,7 @@ const rule = new schedule.RecurrenceRule();
 rule.hour = [4, 5];
 rule.minute = 0;
 rule.second = [2, 6, 10];
-
+console.log("job started-->", rule);
 const job = schedule.scheduleJob(rule, function (props) {
   let dateObject = new Date();
   let date = ("0" + dateObject.getDate()).slice(-2);
